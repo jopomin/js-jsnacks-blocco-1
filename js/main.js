@@ -73,7 +73,6 @@ di zucchine */
 
 var longer = [];
 var shorter = [];
-var equal = [];
 
 for(var i = 0; i < courBasket.length; i++) {
     if (courBasket[i].length > 15) {
@@ -82,14 +81,10 @@ for(var i = 0; i < courBasket.length; i++) {
     else if (courBasket[i].length < 15) {
         shorter.push(courBasket[i])
     }
-    else if (courBasket[i].length == 15) {
-        equal.push(courBasket[i])
-    }
 }
 
 console.log(longer);
 console.log(shorter);
-console.log(equal);
 
 
 var longerSum = 0;
@@ -104,8 +99,18 @@ for(var i = 0; i < shorter.length; i++) {
 }
 console.log("il peso totale delle zucchine più corte è di "+shorterSum+"gr");
 
-var equalSum = 0;
-for(var i = 0; i < equal.length; i++) {
-    equalSum += equal[i].weight;
+/* Scrivi una funzione che accetti una stringa come
+argomento e la ritorni girata (es. Ciao -> oaiC) */
+
+var word = prompt("Inserisci una parola");
+var revWord = flipWord(word);
+console.log(revWord);
+
+function flipWord(string) {
+    var revString ="";
+    for(var i = string.length-1; i >= 0; i--) {
+        revString += string[i];
+    }
+    return revString;
 }
-console.log("il peso totale delle zucchine di 15cm è di "+equalSum+"gr");
+
