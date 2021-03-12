@@ -128,3 +128,24 @@ for (var c = 0; c < guests; c++) {
 }
 
 console.log(nomiCompleti);
+
+var nums = [13, 43, 34, 12, 6, 3, 5, 8, 9, 12, 11, 76, 23, 20, 58, 4, 11];
+
+var odds = [];
+for (var i = 0; i < nums.length; i++) {
+    if (i%2 == 1) {
+        odds.push(nums[i]);
+    }
+}
+console.log(odds);
+
+var oddSum = sum(odds);
+console.log(oddSum);
+
+function sum(list) {
+    var sum = 0;
+    for (var i = 0; i < list.length; i++) {
+        sum += list[i];
+    }
+    return sum;
+}
