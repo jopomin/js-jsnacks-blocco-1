@@ -1,8 +1,3 @@
-/* Crea un array di 10 oggetti che rappresentano una
-zucchina, indicando per ognuna varietà, peso e lunghezza.
-Calcola quanto pesano tutte le zucchine.
- */
-
 var courBasket = [
     {
         "variety": "Bradipo",
@@ -65,11 +60,7 @@ for(var i = 0; i < courBasket.length; i++) {
 console.log("il peso totale delle zucchine è di "+courSum+"gr");
 
 
-/* Crea 10 oggetti che rappresentano una zucchina.
-Dividi in due array separati le zucchine che misurano
-meno o più di 15cm (:sorrisetto:).
-Infine stampa separatamente quanto pesano i due gruppi
-di zucchine */
+
 
 var longer = [];
 var shorter = [];
@@ -86,7 +77,6 @@ for(var i = 0; i < courBasket.length; i++) {
 console.log(longer);
 console.log(shorter);
 
-
 var longerSum = 0;
 for(var i = 0; i < longer.length; i++) {
     longerSum += longer[i].weight;
@@ -99,8 +89,8 @@ for(var i = 0; i < shorter.length; i++) {
 }
 console.log("il peso totale delle zucchine più corte è di "+shorterSum+"gr");
 
-/* Scrivi una funzione che accetti una stringa come
-argomento e la ritorni girata (es. Ciao -> oaiC) */
+
+
 
 var word = prompt("Inserisci una parola");
 var revWord = flipWord(word);
@@ -114,3 +104,27 @@ function flipWord(string) {
     return revString;
 }
 
+
+
+
+var names = ["Pippo", "Giancarlo", "Maurizio", "Gerry", "Ezio", "Paolo", "Carlo"];
+var surnames = ["Baudo", "Magalli", "Costanzo", "Scotti", "Greggio", "Bonolis", "Conti"];
+var nomi = [];
+var cognomi = [];
+var nomiCompleti = [];
+var guests = 3;
+for (var c = 0; c < guests; c++) {
+    var pos1;
+    var pos2;
+    do {
+    pos1 = Math.floor(Math.random()*names.length);
+    } while (nomi.includes(names[pos1]));
+    nomi[c] = names[pos1];
+    do {
+    pos2 = Math.floor(Math.random()*surnames.length);
+    } while (cognomi.includes(surnames[pos2]));
+    cognomi[c] = surnames[pos2];
+    nomiCompleti[c] = nomi[c]+" "+cognomi[c];
+}
+
+console.log(nomiCompleti);
