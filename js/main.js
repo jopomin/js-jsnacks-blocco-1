@@ -194,3 +194,27 @@ function alternate(arr1, arr2) {
     }
     return arrSum;
 }
+
+
+
+
+
+var colori = ["giallo", "verde", "blu", "acquamarina", "viola", "carminio", "beige", "senape"];
+console.log(colori, colori.length);
+
+var numeroB = Math.floor(Math.random()*colori.length+1);
+console.log(numeroB);
+
+var numeroA = Math.floor(Math.random()*(numeroB-1));
+console.log(numeroA);
+
+var diff = subRange(colori, numeroA, numeroB);
+console.log(diff);
+
+function subRange(array, num1, num2) {
+    var arRange = [];
+    for (var i = 0; i < (num2-num1); i++) {
+        arRange[i] = array[i];
+    }
+    return arRange;
+}
