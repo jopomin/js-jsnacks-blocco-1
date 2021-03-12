@@ -1,4 +1,4 @@
-/* var courBasket = [
+var courBasket = [
     {
         "variety": "Bradipo",
         "weight": 176,
@@ -168,26 +168,29 @@ do {
     cities.push(city);
 } while (brands.length > cities.length);
 
-console.log(brands, brands.length, cities, cities.length); */
+console.log(brands, brands.length, cities, cities.length);
 
 
 
 
 var alfa = ["a", "b", "c", "d", "e", "f"];
 var numerico = [1, 2, 3, 4, 5, 6];
-var alfaNumerico = [];
-var w = 0;
-var z = 0;
-
-for (var i = 0; i < (alfa.length+numerico.length); i++) {
-
-    if (i%2 == 0) {
-        alfaNumerico[i] = alfa[w];
-        w++;
-    } else {
-        alfaNumerico[i] = numerico[z];
-        z++;
-    }
-}
-
+var alfaNumerico = alternate(alfa, numerico);
 console.log(alfaNumerico);
+
+
+function alternate(arr1, arr2) {
+    var w = 0;
+    var z = 0;
+    var arrSum = [];
+    for (var i = 0; i < (arr1.length+arr2.length); i++) {
+        if (i%2 == 0) {
+            arrSum[i] = arr1[w];
+            w++;
+        } else {
+            arrSum[i] = arr2[z];
+            z++;
+        }
+    }
+    return arrSum;
+}
