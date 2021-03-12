@@ -129,6 +129,10 @@ for (var c = 0; c < guests; c++) {
 
 console.log(nomiCompleti);
 
+
+
+
+
 var nums = [13, 43, 34, 12, 6, 3, 5, 8, 9, 12, 11, 76, 23, 20, 58, 4, 11];
 
 var odds = [];
@@ -149,3 +153,21 @@ function sum(list) {
     }
     return sum;
 }
+
+
+
+
+var brands = ["Nike", "Bauli", "Ravensburger", "Cirio", "Kia", "Pigna", "Enel", "Sony", "Aruba"];
+console.log(brands, brands.length);
+
+var cities = ["Vigevano", "Saint-Tropez", "Maratea", "Senigallia", "Perugia"];
+console.log(cities, cities.length);
+
+do {
+    var city = prompt("Inserisci una città");
+    cities.push(city);
+} while (brands.length > cities.length);
+
+console.log(brands, brands.length, cities, cities.length);
+
+
